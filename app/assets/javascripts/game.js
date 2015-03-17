@@ -484,7 +484,7 @@ function RenderShape(targetcell, shape, grid) {
     var newtargstring = '';
     var newtarg;
     var pos = targetcell.id.split('r')[1];
-  var pos = pos.split('c');
+    var pos = pos.split('c');
     var refy = parseInt(pos[0]);
     var refx = parseInt(pos[1]);
     for (pixel in shape) {
@@ -508,5 +508,17 @@ function RenderShape(targetcell, shape, grid) {
   $(targetcell).mouseup(function(){
      $(this).unbind('mouseout'); 
      $(this).unbind('mouseup');
+  });
+}
+
+function initializeGame(){
+  var shapes = new Object();
+  g.setHandlers(shapes);
+  $('body').mouseup(function() {
+      isHighlightingBoxes = false;
+      isDraggingShape = false;
+  });
+  $("#gamecontrol").click(function(){
+      StartStop(g);
   });
 }

@@ -51,7 +51,7 @@ table#lifegrid td {
 }
 
 #thegame table.running {
-    border-color:blue;
+    border-color:#ffcc00;
 }
 
 #controls #buttonholder {
@@ -62,4 +62,12 @@ table#lifegrid td {
     width:120px;
     margin:50px;
     padding: 10px;
+}
+
+td.live {
+    background-color:#bbb;
+}
+
+td.dead {
+    background-color:#fff;
 }
