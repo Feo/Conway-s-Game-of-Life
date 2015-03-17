@@ -1,0 +1,30 @@
+  <body>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+      g = NewGrid(<%= @game.width%>,<%= @game.height%> <% if @grid %><%=', ' +  @grid%><% end %>);
+      initializeGame();
+      
+    });
+    </script>
+    <div id="main">
+      <h1>
+        Conway's Game of Life
+      </h1>
+      <div style="clear:both"></div>
+      <div id="controls">
+        <div>
+        <div id="buttonholder">
+          <button id="gamecontrol" value="stop">Run</button>
+        </div>
+        </div>
+      </div>
+      <div id="thegame">
+        <div id="tablearea">
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+

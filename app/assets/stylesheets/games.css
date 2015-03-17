@@ -1,0 +1,65 @@
+body {
+    min-width:1200px;
+    background-color:#eee;
+}
+
+h1 {
+    margin:0px 0px 15px 0px;
+    text-align:center;
+}
+
+table#lifegrid {
+    border-collapse:collapse;
+    border:5px solid #ccc;
+}
+
+table#lifegrid td {
+    font-size:0em;
+    border:1px solid #ddd;
+    padding:0px;
+}
+
+.toggle, #controls, #thegame{
+    -moz-user-select: none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+}
+
+#main {
+    border:1px solid #ccc;
+    background-color:#fff;
+    padding:8px;
+}
+
+#main h1 {
+    margin:5px 0px 15px 0px;
+    border:1px solid #aaa;
+    border-radius:8px;
+    padding:3px;
+    background-color:#fbfbfb;
+}
+
+#thegame {
+    width:800px;
+    margin-top:10px;
+    float:left;
+}
+
+#thegame #tablearea {
+    width:900px;
+}
+
+#thegame table.running {
+    border-color:blue;
+}
+
+#controls #buttonholder {
+    float:left;
+}
+
+#controls #buttonholder button {
+    width:120px;
+    margin:50px;
+    padding: 10px;
+}
