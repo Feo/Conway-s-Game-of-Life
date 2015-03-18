@@ -513,12 +513,26 @@ function RenderShape(targetcell, shape, grid) {
 
 function initializeGame(){
   var shapes = new Object();
+  shapes.blinker = [[0,0],[1,0],[2,0]];
+  shapes.toad = [[0,0],[1,0],[2,0],[-1,-1],[0,-1],[1,-1]];
+  shapes.beacon =[[0,0],[1,0],[0,1],[1,1],[2,2],[3,2],[2,3],[3,3]];
+  shapes.fpentomino = [[0,0],[1,0],[-1,1],[0,1],[0,2]];
+
+  $('#prefabs img').mousedown(function(e) { e.preventDefault(); });
   g.setHandlers(shapes);
+
   $('body').mouseup(function() {
       isHighlightingBoxes = false;
       isDraggingShape = false;
   });
+
   $("#gamecontrol").click(function(){
-      StartStop(g);
+    StartStop(g);
   });
+  $(".prefab").mousedown(function(){
+      $(".prefab").removeClass("selected");
+      $(this).addClass("selected");
+      isDraggingShape = true;
+      Stop("Run", "Stop");
+  })
 }

@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     else
       @game = Game.new
       @game.width = 90
-      @game.height = 55
+      @game.height = 45
       @grid = false
     end
     respond_to do |format|
